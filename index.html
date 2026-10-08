@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web OS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="desktop">
+        <!-- ആപ്പ് ഐക്കൺ -->
+        <div class="icon" onclick="openApp()">
+            📁 <br> My Files
+        </div>
+        
+        <!-- തുറന്നു വരുന്ന വിൻഡോ -->
+        <div id="app-window" class="hidden">
+            <div class="window-header">
+                My Files
+                <button onclick="closeApp()">X</button>
+            </div>
+            <div class="window-content">
+                Welcome to my File System!
+            </div>
+        </div>
+    </div>
+
+    <!-- ടാസ്ക്ബാർ -->
+    <div id="taskbar">
+        <button id="start-btn">Start</button>
+        <span id="clock"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
