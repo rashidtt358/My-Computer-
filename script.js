@@ -1,11 +1,16 @@
-// ആപ്പ് തുറക്കാൻ
-function openApp() {
-    document.getElementById("app-window").classList.remove("hidden");
+// ആപ്പുകൾ തുറക്കാൻ
+function openApp(appId) {
+    document.getElementById(appId).classList.remove("hidden");
 }
 
-// ആപ്പ് അടയ്ക്കാൻ
-function closeApp() {
-    document.getElementById("app-window").classList.add("hidden");
+// ആപ്പുകൾ അടയ്ക്കാൻ
+function closeApp(appId) {
+    document.getElementById(appId).classList.add("hidden");
+}
+
+// സ്റ്റാർട്ട് മെനു തുറക്കാൻ/അടയ്ക്കാൻ
+function toggleStartMenu() {
+    document.getElementById("start-menu").classList.toggle("hidden");
 }
 
 // ക്ലോക്ക് പ്രവർത്തിപ്പിക്കാൻ
