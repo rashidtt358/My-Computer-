@@ -8,26 +8,51 @@
 </head>
 <body>
     <div id="desktop">
-        <!-- ആപ്പ് ഐക്കൺ -->
-        <div class="icon" onclick="openApp()">
+        <!-- ഐക്കണുകൾ -->
+        <div class="icon" onclick="openApp('myfiles-window')" style="top: 20px;">
             📁 <br> My Files
         </div>
+        <div class="icon" onclick="openApp('notepad-window')" style="top: 100px;">
+            📝 <br> Notepad
+        </div>
         
-        <!-- തുറന്നു വരുന്ന വിൻഡോ -->
-        <div id="app-window" class="hidden">
+        <!-- My Files വിൻഡോ -->
+        <div id="myfiles-window" class="app-window hidden">
             <div class="window-header">
-                My Files
-                <button onclick="closeApp()">X</button>
+                📁 My Files
+                <button onclick="closeApp('myfiles-window')">X</button>
             </div>
             <div class="window-content">
-                Welcome to my File System!
+                <p>Welcome to My Files!</p>
+                <p>📄 document.txt</p>
+                <p>🖼️ image.png</p>
+            </div>
+        </div>
+
+        <!-- Notepad വിൻഡോ -->
+        <div id="notepad-window" class="app-window hidden">
+            <div class="window-header">
+                📝 Notepad
+                <button onclick="closeApp('notepad-window')">X</button>
+            </div>
+            <div class="window-content" style="padding: 0;">
+                <textarea placeholder="ഇവിടെ ടൈപ്പ് ചെയ്യാം..."></textarea>
             </div>
         </div>
     </div>
 
+    <!-- സ്റ്റാർട്ട് മെനു -->
+    <div id="start-menu" class="hidden">
+        <ul>
+            <li>⚙️ Settings</li>
+            <li>🌐 Browser</li>
+            <li onclick="alert('Shutting Down...')">🔴 Shut Down</li>
+        </ul>
+    </div>
+
     <!-- ടാസ്ക്ബാർ -->
     <div id="taskbar">
-        <button id="start-btn">Start</button>
+        <button id="start-btn" onclick="toggleStartMenu()">Start</button>
         <span id="clock"></span>
     </div>
 
